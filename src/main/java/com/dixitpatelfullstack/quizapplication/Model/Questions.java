@@ -19,7 +19,7 @@ public class Questions {
 	private String option2;
 	private String option3;
 	private String option4;
-	private String correct_answer;  
+	private String correctAnswer;  
 	
 	
 
@@ -107,14 +107,14 @@ public class Questions {
 
 
 
-	public String getCorrect_answer() {
-		return correct_answer;
+	public String getCorrectAnswerr() {
+		return correctAnswer;
 	}
 
 
 
-	public void setCorrect_answer(String correct_answer) {
-		this.correct_answer = correct_answer;
+	public void setCorrectAnswer(String correctAnswer) {
+		this.correctAnswer = correctAnswer;
 	}
 
 
@@ -123,7 +123,7 @@ public class Questions {
 	public String toString() {
 		return "Questions [question_id=" + question_id + ", topic=" + topic + ", question=" + question + ", option1="
 				+ option1 + ", option2=" + option2 + ", option3=" + option3 + ", option4=" + option4
-				+ ", correct_answer=" + correct_answer + "]";
+				+ ", correctAnswer=" + correctAnswer + "]";
 	}
 	
 	
