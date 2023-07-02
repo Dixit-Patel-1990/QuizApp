@@ -3,7 +3,7 @@ package com.dixitpatelfullstack.quizapplication.Model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class QuestionId {
+public class QuestionIdWrapper {
 	private Integer question_id;
 
 	public Integer getQuestion_id() {

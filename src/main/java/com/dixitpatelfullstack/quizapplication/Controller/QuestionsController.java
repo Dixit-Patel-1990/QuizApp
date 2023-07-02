@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dixitpatelfullstack.quizapplication.Model.QuestionId;
+import com.dixitpatelfullstack.quizapplication.Model.QuestionIdWrapper;
 import com.dixitpatelfullstack.quizapplication.Model.Questions;
 import com.dixitpatelfullstack.quizapplication.service.QuestionService;
 
@@ -26,7 +26,7 @@ public class QuestionsController {
 	QuestionService questionService;
 	
 	@Autowired
-	QuestionId questionId;
+	QuestionIdWrapper questionId;
 
 	@GetMapping("allQuestions")
 	public List<Questions> getAllQuestions() {
@@ -56,8 +56,13 @@ public class QuestionsController {
 		return "Question Updated";
 	}
 	
+	/*
+	 * QuestionId is wrapper class for question ID
+	 * If we do not use it it will give JSON parse error 
+	 * for passing Integer value
+	 */
 	@DeleteMapping("delete")
-	public String deleteQuestion(@RequestBody QuestionId questionId) {
+	public String deleteQuestion(@RequestBody QuestionIdWrapper questionId) {
 		System.out.println("questionId is " + questionId);
 		questionService.deleteQuestion(questionId);
 		return "Question Deleted Successfully";

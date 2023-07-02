@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dixitpatelfullstack.quizapplication.DAO.QuestionDAO;
-import com.dixitpatelfullstack.quizapplication.Model.QuestionId;
+import com.dixitpatelfullstack.quizapplication.Model.QuestionIdWrapper;
 import com.dixitpatelfullstack.quizapplication.Model.Questions;
 
 
@@ -32,7 +32,7 @@ public class QuestionService {
 		questionDAO.save(question);	
 	}
 
-	public void deleteQuestion(QuestionId questionId) {
+	public void deleteQuestion(QuestionIdWrapper questionId) {
 		questionDAO.deleteById(questionId.getQuestion_id());
 	}
 	
