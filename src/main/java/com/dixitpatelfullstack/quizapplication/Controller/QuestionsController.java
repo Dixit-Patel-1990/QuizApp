@@ -28,7 +28,7 @@ public class QuestionsController {
 	@Autowired
 	QuestionIdWrapper questionId;
 
-	@GetMapping("allQuestions")
+	@GetMapping("all")
 	public List<Questions> getAllQuestions() {
 		return questionService.getAllQuestions();
 	}

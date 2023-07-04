@@ -6,6 +6,7 @@ public class CreateQuizWrapper {
 	private String title;
 	private String difficultyLevel;
 	private Integer numOfQuestions;
+	private Questions questions;
 	public String getTopic() {
 		return topic;
 	}
@@ -30,6 +31,10 @@ public class CreateQuizWrapper {
 	public void setNumOfQuestions(Integer numOfQuestions) {
 		this.numOfQuestions = numOfQuestions;
 	}
-	
-	
+	public Questions getQuestions() {
+		return questions;
+	}
+	public void setQuestions(Questions questions) {
+		this.questions = questions;
+	}
 }
